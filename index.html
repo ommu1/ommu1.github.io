@@ -371,23 +371,24 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
       </div>
     </div>
 
-    <div class="project-card reveal" onclick="openModal('modal2')">
+    <div class="project-card reveal" onclick="window.open('https://github.com/ommu1/SmartProductPricing','_blank')">
       <div class="project-top">
         <div class="project-number">02 / 03</div>
         <div class="project-icon-row">
-          <div class="project-icon p-icon-2">📊</div>
-          <span class="project-badge badge-done">Completed</span>
+          <div class="project-icon p-icon-2">💰</div>
+          <span class="project-badge badge-done">ML · NLP</span>
         </div>
-        <h3 class="project-title">Customer Behaviour Data Analysis</h3>
-        <p class="project-desc">End-to-end exploratory data analysis — raw data to actionable business insights. Cleaning, feature analysis, trend identification, and visualizations that actually answer real business questions.</p>
+        <h3 class="project-title">Smart Product Pricing Prediction</h3>
+        <p class="project-desc">End-to-end ML pipeline that predicts product prices from catalog text and images. TF-IDF vectorization, OpenCV image features, feature engineering, and Gradient Boosting — validated with 5-fold cross-validation.</p>
         <div class="project-tags">
-          <span class="project-tag">Python</span><span class="project-tag">Pandas</span><span class="project-tag">Matplotlib</span><span class="project-tag">Seaborn</span><span class="project-tag">SQL</span>
+          <span class="project-tag">Python</span><span class="project-tag">Scikit-learn</span><span class="project-tag">TF-IDF</span><span class="project-tag">OpenCV</span><span class="project-tag">Gradient Boosting</span>
         </div>
       </div>
       <div class="project-bottom">
         <div class="project-metrics">
-          <div class="metric"><strong>5+</strong>Insights</div>
-          <div class="metric"><strong>EDA</strong>Full cycle</div>
+          <div class="metric"><strong>3</strong>Models trained</div>
+          <div class="metric"><strong>5-fold</strong>CV validated</div>
+          <div class="metric"><strong>5035+</strong>Features</div>
         </div>
         <div class="project-arrow">→</div>
       </div>
@@ -596,31 +597,32 @@ footer{padding:2rem 4rem;border-top:1px solid var(--border);display:flex;justify
   <div class="modal">
     <button class="modal-close" onclick="closeModal('modal2')">✕</button>
     <div class="modal-tag">Case Study 02</div>
-    <div class="modal-title">Customer Behaviour Data Analysis</div>
-    <div class="modal-subtitle">Raw data → Cleaned data → Business insights → Actionable recommendations.</div>
+    <div class="modal-title">Smart Product Pricing Prediction</div>
+    <div class="modal-subtitle">ML pipeline — text + images → price prediction. NLP, feature engineering, 3 models compared, 5-fold CV.</div>
     <div class="case-section">
       <div class="case-section-title">The Problem</div>
-      <p>Raw data is useless. The challenge was taking a messy real-world dataset and extracting <strong>business-relevant insights</strong> — not just pretty charts, but answers to specific questions that a product or business team would actually care about.</p>
+      <p>E-commerce platforms need accurate price predictions for millions of products — but product prices depend on text descriptions, visual appearance, weight, pack size, and dozens of other signals. The challenge was building a <strong>multimodal ML pipeline</strong> that extracts all these signals and predicts prices reliably across diverse product categories.</p>
     </div>
     <div class="case-section">
       <div class="case-section-title">My Approach</div>
-      <p>Started by defining 5 business questions before touching the data. Then: data cleaning (handling nulls, outliers, type corrections) → exploratory analysis → visualization → interpretation. Every chart had a "so what" attached to it. The output was a structured notebook with clear observations and concrete recommendations, not just code.</p>
+      <p>Started with EDA — found price distribution was heavily right-skewed, so applied log-transformation before modeling. Then built three parallel feature pipelines: TF-IDF for text (5,000 features + bigrams), regex-based numeric extraction (11 features: weight, pack size, volume, premium keywords), and OpenCV color histograms from product images. Combined all three into a single sparse matrix and trained three algorithms to find the best performer.</p>
     </div>
     <div class="case-section">
-      <div class="case-section-title">Techniques Used</div>
+      <div class="case-section-title">Technical Highlights</div>
       <ul class="challenge-list">
-        <li>Pandas for data manipulation — groupby, merge, pivot operations</li>
-        <li>Seaborn and Matplotlib for statistical visualization — distributions, correlations, trends</li>
-        <li>SQL queries for structured data extraction and aggregation</li>
-        <li>Documented findings with business context, not just technical output</li>
+        <li>TF-IDF with 5,000 features and bigrams for semantic text representation of product descriptions</li>
+        <li>11 engineered numeric features extracted via regex — weight (oz/lb/g normalized), pack count, volume, premium keyword score</li>
+        <li>OpenCV color histogram extraction from product images — 24-dim feature vector capturing visual pricing signals</li>
+        <li>Log-transform on target variable significantly improved all model performances by handling outlier prices</li>
+        <li>5-fold cross-validation confirmed stable, consistent performance across all data splits</li>
       </ul>
     </div>
     <div class="case-section">
       <div class="case-section-title">Outcome</div>
       <div class="outcome-grid">
-        <div class="outcome-item"><div class="outcome-num">5</div><div class="outcome-label">Business questions answered</div></div>
-        <div class="outcome-item"><div class="outcome-num">Full</div><div class="outcome-label">EDA pipeline</div></div>
-        <div class="outcome-item"><div class="outcome-num">GitHub</div><div class="outcome-label">Documented notebook</div></div>
+        <div class="outcome-item"><div class="outcome-num">3</div><div class="outcome-label">Models trained & compared</div></div>
+        <div class="outcome-item"><div class="outcome-num">5035+</div><div class="outcome-label">Total features combined</div></div>
+        <div class="outcome-item"><div class="outcome-num">5-fold</div><div class="outcome-label">Cross-validation stable</div></div>
       </div>
     </div>
   </div>
